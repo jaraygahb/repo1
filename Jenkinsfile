@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('print') {
       steps {
-        bat 'echo %BUILD_NUMBER%'
+        sh '''echo $BUILD_NUMBER
+echo $JENKINS_URL'''
       }
     }
 
